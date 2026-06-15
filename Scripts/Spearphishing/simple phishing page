@@ -1,0 +1,21 @@
+cat > index.html << EOF
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Microsoft Login</title>
+  <style>
+    body { font-family: Arial; text-align: center; margin-top: 50px; }
+    input { padding: 10px; margin: 10px; width: 300px; }
+  </style>
+</head>
+<body>
+  <h2>Sign in to your account</h2>
+  <form>
+    <input type="text" placeholder="Email" /><br>
+    <input type="password" placeholder="Password" /><br><br>
+    <button type="button" onclick="alert('Credentials captured! (Lab Test)')">Sign In</button>
+  </form>
+  <p>This is a test phishing page for lab only.</p>
+</body>
+</html>
+EOF
