@@ -1,0 +1,16 @@
+ 
+# post activity simple test on the shell 
+
+
+# Host Enumeration
+meterpreter > sysinfo
+Computer        : TARGET-PC
+OS              : Windows 10 22H2+ (10.0 Build 19045).
+Architecture    : x64
+Domain          : ADPRO
+
+# Process Spawning (Simulating Abnormal Parent-Child Anomaly)
+meterpreter > execute -f "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+Process 5300 created. 
+
+# screenshot -p /home/kali/dowload
