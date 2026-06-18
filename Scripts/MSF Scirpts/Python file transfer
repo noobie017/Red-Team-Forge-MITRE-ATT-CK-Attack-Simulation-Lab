@@ -1,0 +1,4 @@
+# used this for file transfer since tlhe meterpreter.exe gets taged as malicous so it wont get donwloaded from sites - used a server - accessed the server using the target machine and download meterpreter
+
+cd /home/kali/Downloads
+sudo python3 -m http.server 80
