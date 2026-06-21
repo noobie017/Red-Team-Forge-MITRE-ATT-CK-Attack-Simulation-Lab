@@ -1,0 +1,13 @@
+## Findings & Artifacts
+Below is a high-level summary of the discovered host, followed by a deep-dive breakdown of each open port:
+
+| Property | Value / Finding | Security Context |
+| :--- | :--- | :--- |
+| **Target IP** | `192.168.10.9` | The active host identified on the subnet. |
+| **Discovered Ports** | 6 Open TCP Ports | Represents the exposed network attack surface. |
+| **Operating System** | Windows | Determined via service banner matching and finger-printing. |
+| **Environment** | Oracle VirtualBox VM | Confirmed via the MAC Address prefix (`08:00:27`). |
+
+
+### Target Attack Surface Matrix
+... [Your existing port table goes here] ...
