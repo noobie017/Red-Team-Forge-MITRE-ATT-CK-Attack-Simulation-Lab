@@ -1,13 +1,33 @@
-This repository contains documentation and analyzed log artifacts for detecting Windows local reconnaissance mechanisms (specifically account discovery) within a Security Operations Center (SOC) simulation environment.
+MITRE ATT&CK T1087.001 - Account Discovery: Local Account (Controls Assessment)
 
- Lab Overview
-The goal of this exercise was to simulate an adversary performing post-exploitation internal reconnaissance (MITRE ATT&CK T1087.001 - Local Account Discovery) from an active compromise shell, and to successfully track the resulting forensic footprint using Splunk.
+This lab segment simulates an execution attempt of MITRE ATT&CK T1087.001 (Account Discovery: Local Account) within a dedicated Active Directory (AD) laboratory environment. The objective of this exercise was twofold: to validate the target endpoint's defensive detection capabilities and to evaluate how security controls behave under specific operational constraints.
 
-Attacker Infrastructure: Kali Linux (192.168.10.250) running Metasploit Framework (msfconsole).
+Simulation Parameters
+Attacker Host: Kali Linux (192.168.10.250)
 
-Target Environment: Windows 10 client (target-pc.adpro.local) operating under the ADPRO domain context.
+Target Host: Windows 10 Workstation (192.168.10.9)
 
-Logging Solutions: Windows Security Event Auditing and Microsoft Sysmon.
+Target Domain Context: ADPRO.local
 
-🛠️ Execution & Simulation
-Once interactive access was established via a reverse TCP handler session, a native command shell was spawned to inspect host profiles. Two distinct enumeration vectors were executed:
+Initial Access Shell: Metasploit Framework (Meterpreter Reverse TCP)
+
+Defensive Monitoring: Sysmon + Splunk Enterprise Forwarder
+
+Sequence of Execution & Technical Troubleshooting
+The target objective was to interface with the local Security Accounts Manager (SAM) configuration database using native utility binaries and PowerShell scripting extensions to harvest active system profiles.
+
+The following timeline details the execution steps, architectural roadblocks encountered, and troubleshooting methodologies applied:
+
+1. Initial Context Discovery
+Upon establishing a command and control (C2) channel to the target workstation, context enumeration was performed via the meterpreter interface to drop into an interactive shell environment matching the target's download path context: C:\Users\jcruz\Downloads>.
+
+2. Native Binary Query Execution
+To simulate a fast, low-overhead administrative reconnaissance technique, the legacy system administration command structure was invoked. This utility queries the system directly to output an index of all existing local machine profiles:
+
+DOS
+net user
+3. Advanced Scripting Enumeration
+To evaluate deeper script auditing and bypass local execution restriction constraints, an explicit object-oriented commandlet structure was passed to the PowerShell subsystem. This command targets specific structural attributes—specifically Name, Enabled status, and profile descriptions:
+
+DOS
+powershell -ExecutionPolicy Bypass -Command "Get-LocalUser | Select-Object Name, Enabled, D
