@@ -1,0 +1,3 @@
+powershell -ExecutionPolicy Bypass -Command "Get-LocalUser | Select-Object Name, Enabled, Description"
+
+net user
