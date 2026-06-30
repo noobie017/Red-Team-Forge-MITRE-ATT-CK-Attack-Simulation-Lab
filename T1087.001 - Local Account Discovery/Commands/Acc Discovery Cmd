@@ -1,0 +1,6 @@
+DOS
+
+net user
+
+DOS
+powershell -ExecutionPolicy Bypass -Command "Get-LocalUser | Select-Object Name, Enabled, Descrip
