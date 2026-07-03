@@ -6,11 +6,8 @@ using Splunk.
 
 Simulation Parameters
 Attacker Host: Kali Linux (192.168.10.250)
-
 Target Host: Windows 10 Workstation (192.168.10.9)
-
 Target Domain Context: ADPRO.local (Offline / Domain Controller Unreachable)
-
 Initial Access Shell: Metasploit Framework (Meterpreter Reverse TCP)
 
 Defensive Monitoring: Sysmon + Splunk Enterprise Forwarder
