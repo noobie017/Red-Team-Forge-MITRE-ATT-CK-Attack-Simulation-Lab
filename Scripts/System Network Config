@@ -1,0 +1,7 @@
+### CMD 
+
+ipconfig /all
+
+route print
+
+netstat -ano
