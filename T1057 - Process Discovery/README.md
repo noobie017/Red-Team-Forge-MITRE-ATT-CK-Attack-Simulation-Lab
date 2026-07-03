@@ -19,3 +19,10 @@ The following timeline details the execution steps, architectural roadblocks enc
 1. Initial Context Discovery
 Upon establishing an interactive command shell channel from the active Metasploit session, system context enumeration verified that the runtime environment was limited to a standard, 
 non-administrative user profile: ADPRO\jcruz. Because the Active Directory server was shut off, domain-level privilege escalation vectors were restricted.
+
+2. Native Process Enumeration Execution
+CMD 
+tasklist
+
+Powershell variant 
+powershell -ExecutionPolicy Bypass -Command "Get-Process | Select-Object Name, Id, Company"
