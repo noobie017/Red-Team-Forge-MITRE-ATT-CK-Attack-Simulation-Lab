@@ -1,0 +1,5 @@
+### CMD 
+tasklist
+
+### Powershell Variant 
+powershell -ExecutionPolicy Bypass -Command "Get-Process | Select-Object Name, Id, Company"
