@@ -1,0 +1,6 @@
+CMD
+ net group /domain
+
+net group "Enterprise Admins" /domain
+
+whoami /groups
