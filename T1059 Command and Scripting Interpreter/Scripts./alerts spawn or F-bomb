@@ -1,0 +1,1 @@
+execute -H -i -f powershell.exe -a "-Command \"Add-Type -AssemblyName PresentationFramework; 1..10 | ForEach-Object { [System.Windows.MessageBox]::Show('TOO SLOW!', 'ALERT', 'OK', 'Warning') }\""
