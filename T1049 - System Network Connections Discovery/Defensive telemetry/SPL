@@ -1,0 +1,3 @@
+index="*" source="WinEventLog:Microsoft-Windows-Sysmon/Operational"
+| search CommandLine IN ("*netstat*", "*NetTCPConnection*")
+|table host, User, Image, ParentImage, CommandLine
