@@ -1,0 +1,8 @@
+cmd
+netstat -ano
+
+PowerShell
+Get-NetTCPConnection -State Established
+
+Bash
+meterpreter > netstat
