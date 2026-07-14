@@ -1,0 +1,10 @@
+cmd dir C:\Users /s /b | findstr /i ".txt .doc .docx .xls .xlsx .pdf .db" cmd
+
+dir C:\ /s /b | findstr /i "password|credential|config|login"
+
+cmd
+
+tree C:\Users\ /f > C:\Windows\Temp\filelist.txt
+
+Copy Interesting Files (Example)cmd
+copy C:\Users\jcruz\Desktop*.txt C:\Windows\Temp\
