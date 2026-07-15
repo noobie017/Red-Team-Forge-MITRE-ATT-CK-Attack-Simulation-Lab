@@ -1,0 +1,7 @@
+spl
+
+index="*" source="WinEventLog:Microsoft-Windows-Sysmon/Operational" 
+| search CommandLine IN ("*RedTeam*", "*net user*", "*Administrators*", "*HKLM\SYSTEM\CurrentControlSet*")
+| table _time, host, User, Image, ParentImage, CommandLine
+| sort -_time
+
