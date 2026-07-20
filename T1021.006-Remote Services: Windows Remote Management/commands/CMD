@@ -1,0 +1,9 @@
+cmd
+winrm quickconfig -force
+winrm set winrm/config/service/auth @{Basic="true"}
+winrm set winrm/config/service @{AllowUnencrypted="true"}
+netsh advfirewall firewall add rule name="WinRM HTTP" dir=in action=allow protocol=TCP localport=5985
+
+
+bash
+evil-winrm -i 192.168.10.9 -u RedTeam -p "P@ssw0rd123"
