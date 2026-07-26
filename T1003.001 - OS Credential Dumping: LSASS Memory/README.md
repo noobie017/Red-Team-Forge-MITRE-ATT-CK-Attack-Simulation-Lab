@@ -46,3 +46,6 @@ With the Domain Controller offline, the Windows 10 target operated solely on cac
 prevented any cross-process pivoting or standard token manipulations by the unverified domain user.
 
 Final Assessment Result: ATTACK FAILED
+
+
+
