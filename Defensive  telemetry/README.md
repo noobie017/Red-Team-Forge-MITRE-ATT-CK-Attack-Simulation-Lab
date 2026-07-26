@@ -24,3 +24,4 @@ the focus here is on **behavioral analysis** utilizing Microsoft Sysmon and Wind
 * **Scenario:** An attacker utilizes an active Meterpreter memory-resident session to inject into the Windows API and spawn a native application (e.g., `execute -f msedge.exe`) to blend in with normal background activity.
 * **The Behavioral Footprint:** When interactive processes are launched via a C2 agent, they bypass the traditional command-line shell (`cmd.exe` or `powershell.exe`).
 This results in an anomalous **Parent-Child process lineage** where the threat binary is listed directly as the creator, often accompanied by a stripped or missing `CommandLine` string.
+.
