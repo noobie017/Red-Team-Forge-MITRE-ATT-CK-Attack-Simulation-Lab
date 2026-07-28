@@ -19,5 +19,5 @@ mimikatz
 
 privilege::debug
 
-sadump::lsa /patch
+lsadump::lsa /patch
 
