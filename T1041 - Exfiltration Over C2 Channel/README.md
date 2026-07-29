@@ -43,6 +43,7 @@ Tools & Techniques Used:
 PowerShell Compress-Archive for data staging
 Netcat (nc) for receiving exfiltrated data
 PowerShell Invoke-WebRequest for outbound transfer
+.
 
 
 
