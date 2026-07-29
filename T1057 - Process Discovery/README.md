@@ -25,4 +25,4 @@ CMD
 tasklist
 
 Powershell variant 
-powershell -ExecutionPolicy Bypass -Command "Get-Process | Select-Object Name, Id, Company"
+powershell -ExecutionPolicy Bypass -Command "Get-Process | Select-Object Name, Id, Company".
