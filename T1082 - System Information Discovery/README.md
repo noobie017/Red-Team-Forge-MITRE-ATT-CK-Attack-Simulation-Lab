@@ -27,3 +27,4 @@ DOS
 systeminfo
 
 hostname
+mm
